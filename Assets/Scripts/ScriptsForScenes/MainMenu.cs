@@ -14,5 +14,10 @@ public class MainMenu : MonoBehaviour{
         Application.Quit();
         Debug.Log("Quit!"); 
     }
+
+    public void Settings(){
+       SceneManager.LoadScene("Settings");
+
+    }
     
 }
