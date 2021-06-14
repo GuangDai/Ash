@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayControler : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float MoveSpeed = 0.5f; // Role's moving speed
+    public float MoveSpeed = 5000f; // Role's moving speed
     void Start()
     {
         
@@ -19,8 +19,9 @@ public class PlayControler : MonoBehaviour
         float MoveY = Input.GetAxisRaw("Vertical"); // Control Vertical movement W:1 S:-1
 
         Vector2 position = transform.position;
-        position.x += MoveX * MoveSpeed * Time.deltaTime;
-        position.y += MoveY * MoveSpeed * Time.deltaTime;
+        position.x += MoveX * MoveSpeed * Time.deltaTime * 50f;
+        position.y += MoveY * MoveSpeed * Time.deltaTime * 50f;
         transform.position = position;
     }
+
 }
